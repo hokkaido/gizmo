@@ -1,5 +1,5 @@
 (ns gizmo.graph
-  (:import com.tinkerpop.blueprints Graph))
+  (:import (com.tinkerpop.blueprints Graph Vertex Edge)))
 
 (defn get-features
   [^Graph graph]
