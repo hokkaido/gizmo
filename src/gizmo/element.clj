@@ -1,4 +1,5 @@
 (ns gizmo.element
+  (:refer-clojure :exclude [keys])
   (:import com.tinkerpop.blueprints.Element))
 
 (defn get-property

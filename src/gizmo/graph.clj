@@ -1,4 +1,5 @@
 (ns gizmo.graph
+  (:refer-clojure :exclude [keys])
   (:import (com.tinkerpop.blueprints Graph Vertex Edge)))
 
 (defn get-features
