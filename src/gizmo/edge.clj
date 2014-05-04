@@ -8,3 +8,28 @@
 (defn get-label
   [^Edge edge]
   (.getLabel edge))
+
+(defn get-property
+  [^Edge edge key]
+  (.getProperty edge key)) 
+
+(defn get-property-keys
+  [^Edge edge]
+  (set (.getPropertyKeys edge)))
+
+(defn set-property!
+  [^Edge edge key value ]  
+  (.setProperty edge key value))
+
+(defn remove-property!
+  [^Edge edge ^String key]
+  (.removeProperty edge key)
+  edge)
+
+(defn remove!
+  [^Edge edge]
+  (.remove edge))
+
+(defn get-id
+  [^Edge edge]
+  (.getId edge))

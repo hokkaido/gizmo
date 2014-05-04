@@ -2,6 +2,6 @@
   (:refer-clojure :exclude [first second])
   (:import com.tinkerpop.blueprints.Predicate))
 
-(defn evaluate
+(defn evaluate?
   [^Predicate predicate first second]
   (.evaluate predicate first second))

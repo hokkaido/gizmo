@@ -23,8 +23,8 @@
 
 (defn remove!
   [^Element element]
-  (element .remove))
+  (.remove element))
 
-(defn get-id!
+(defn get-id
   [^Element element]
-  (element .getId))
+  (.getId element))
