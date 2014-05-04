@@ -1,5 +1,5 @@
 (ns gizmo.edge
-  (:import com.tinkerpop.blueprints Edge Vertex Direction))
+  (:import (com.tinkerpop.blueprints Edge Vertex Direction)))
 
 (defn get-vertex
   [^Edge edge ^Direction direction]
