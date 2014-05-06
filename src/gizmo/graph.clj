@@ -19,8 +19,8 @@
   (.removeVertex graph vertex))
 
 (defn get-vertices
-  "Returns an iterable to all the vertices in the graph.
-  * If this is not possible for the implementation, then an UnsupportedOperationException can be thrown."
+  "Returns an iterable to all the vertices in the graph. If this is not possible 
+  for the implementation, then an UnsupportedOperationException can be thrown."
   ([^Graph graph] 
     (.getVertices graph))
   ([^Graph graph key value]
