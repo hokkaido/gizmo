@@ -3,6 +3,8 @@
   (:import com.tinkerpop.blueprints.Element))
 
 (defn get-property
+  "Return the object value associated with the provided string key.
+  If no value exists for that key, return nil"
   [^Element element key]
   (.getProperty element key)) 
 
@@ -22,9 +24,11 @@
   element)
 
 (defn remove!
+  "Removes the element from the graph."
   [^Element element]
   (.remove element))
 
 (defn get-id
+  "An identifier that is unique."
   [^Element element]
   (.getId element))

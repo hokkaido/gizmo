@@ -37,10 +37,19 @@
     (is (= id "Edge AB" )))))
 
 (deftest test-edge-properties
-  (testing "test-edge-get-id-symbol"
+  (testing "test-edge-get-id-keyword"
     (let [graph (TinkerGraphFactory/createTinkerGraph)
           a     (g/add-vertex! graph "Vertex A")
           b     (g/add-vertex! graph "Vertex B")
           ab    (g/add-edge! graph :my-id a b "Edge AB Label")
           id    (e/get-id ab)]
     (is (= id :my-id )))))
+
+(deftest test-edge-properties
+  (testing "test-edge-get-id-number"
+    (let [graph (TinkerGraphFactory/createTinkerGraph)
+          a     (g/add-vertex! graph "Vertex A")
+          b     (g/add-vertex! graph "Vertex B")
+          ab    (g/add-edge! graph 5 a b "Edge AB Label")
+          id    (e/get-id ab)]
+    (is (= id 5 )))))
