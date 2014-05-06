@@ -29,6 +29,6 @@
   (.remove element))
 
 (defn get-id
-  "An identifier that is unique."
+  "Returns an identifier that is unique."
   [^Element element]
   (.getId element))

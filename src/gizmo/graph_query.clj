@@ -1,4 +1,5 @@
 (ns gizmo.graph-query
+  (:refer-clojure :exclude [keys])
   (:import com.tinkerpop.blueprints Query GraphQuery Predicate))
 
 (defn has

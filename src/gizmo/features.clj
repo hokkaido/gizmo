@@ -58,8 +58,6 @@
   [^Features features]
   (.hasImplicitElements features))
 
-
-
 (defn ignores-supplied-ids? 
   [^Features features]
   (.ignoresSuppliedIds features))
