@@ -35,3 +35,12 @@
           ab    (g/add-edge! graph "Edge AB" a b "Edge AB Label")
           id    (e/get-id ab)]
     (is (= id "Edge AB" )))))
+
+(deftest test-edge-properties
+  (testing "test-edge-get-id-symbol"
+    (let [graph (TinkerGraphFactory/createTinkerGraph)
+          a     (g/add-vertex! graph "Vertex A")
+          b     (g/add-vertex! graph "Vertex B")
+          ab    (g/add-edge! graph :my-id a b "Edge AB Label")
+          id    (e/get-id ab)]
+    (is (= id :my-id )))))
