@@ -1,7 +1,6 @@
 (ns gizmo.direction
   (:import com.tinkerpop.blueprints Direction))
 
-
 (def in
   (Direction/IN))
 

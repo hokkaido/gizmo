@@ -11,7 +11,7 @@
 
 (defn get-property
   [^Edge edge key]
-  (.getProperty edge key)) 
+  (.getProperty edge key))
 
 (defn get-property-keys
   [^Edge edge]
@@ -23,8 +23,7 @@
 
 (defn remove-property!
   [^Edge edge ^String key]
-  (.removeProperty edge key)
-  edge)
+  (.removeProperty edge key))
 
 (defn remove!
   [^Edge edge]
@@ -32,4 +31,4 @@
 
 (defn get-id
   [^Edge edge]
-  (.getId edge))
+  (.getId edge)

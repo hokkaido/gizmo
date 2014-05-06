@@ -43,7 +43,7 @@
           b     (g/add-vertex! graph "Vertex B")
           ab    (g/add-edge! graph :my-id a b "Edge AB Label")
           id    (e/get-id ab)]
-    (is (= id :my-id )))))
+    (is (= id ":my-id" )))))
 
 (deftest test-edge-properties
   (testing "test-edge-get-id-number"
@@ -52,4 +52,4 @@
           b     (g/add-vertex! graph "Vertex B")
           ab    (g/add-edge! graph 5 a b "Edge AB Label")
           id    (e/get-id ab)]
-    (is (= id 5 )))))
+    (is (= id "5" )))))

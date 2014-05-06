@@ -31,8 +31,7 @@
 
 (defn remove-property!
   [^Vertex vertex ^String key]
-  (.removeProperty vertex key)
-  vertex)
+  (.removeProperty vertex key))
 
 (defn remove!
   [^Vertex vertex]
