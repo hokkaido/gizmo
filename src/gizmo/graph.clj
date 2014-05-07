@@ -1,6 +1,6 @@
 (ns gizmo.graph
   (:refer-clojure :exclude [keys])
-  (:import (com.tinkerpop.blueprints Graph TransactionalGraph ThreadedTransactionalGraph Vertex Edge)))
+  (:import (com.tinkerpop.blueprints Graph TransactionalGraph ThreadedTransactionalGraph IndexableGraph KeyIndexableGraph Vertex Edge MetaGraph)))
 
 (defn get-features
   [^Graph graph]
@@ -60,17 +60,17 @@
 
 (defn commit!
   [^TransactionalGraph graph]
-  (.shutdown commit))
+  (.commit graph))
 
 (defn rollback!
   [^TransactionalGraph graph]
-  (.shutdown rollback))
+  (.rollback graph))
 
 ;; ThreadedTransactionalGraph
 
 (defn new-transaction!
   [^ThreadedTransactionalGraph graph]
-  (.newTransaction graph)))
+  (.newTransaction graph))
 
 ;; IndexableGraph
 

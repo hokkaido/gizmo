@@ -33,4 +33,4 @@
 
 (defn get-id
   [^Edge edge]
-  (.getId edge)
+  (.getId edge))
