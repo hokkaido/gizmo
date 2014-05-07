@@ -9,13 +9,15 @@
   [^Edge edge]
   (.getLabel edge))
 
+;; Re-exposing Element
+
 (defn get-property
   [^Edge edge key]
   (.getProperty edge key))
 
 (defn get-property-keys
   [^Edge edge]
-  (set (.getPropertyKeys edge)))
+  (.getPropertyKeys edge))
 
 (defn set-property!
   [^Edge edge key value ]  

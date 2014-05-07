@@ -17,13 +17,15 @@
   [^Vertex vertex ^String label ^Vertex inVertex]
   (.addEdge label inVertex))
 
+;; Re-exposing Element
+
 (defn get-property
   [^Vertex vertex key]
   (.getProperty vertex key)) 
 
 (defn get-property-keys
   [^Vertex vertex]
-  (set (.getPropertyKeys vertex)))
+  (.getPropertyKeys vertex))
 
 (defn set-property!
   [^Vertex vertex key value ]  

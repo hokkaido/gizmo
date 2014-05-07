@@ -1,6 +1,6 @@
 (ns gizmo.query
   (:refer-clojure :exclude [keys])
-  (:import com.tinkerpop.blueprints Query Predicate))
+  (:import com.tinkerpop.blueprints Query Predicate VertexQuery Direction))
 
 (defn has
   ([^Query query key]
@@ -31,3 +31,21 @@
 (defn vertices
   [^Query query]
   (.vertices query vertices))
+
+;; VertexQuery
+
+(defn direction
+  [^VertexQuery query ^Direction direction]
+  (.direction query direction))
+
+(defn labels
+  [^VertexQuery query labels]
+  (.labels query (into-array String labels)))
+
+(defn count
+  [^VertexQuery query]
+  (.labels query count))
+
+(defn vertex-ids
+  [^VertexQuery query]
+  (.vertexIds query))

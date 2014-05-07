@@ -10,7 +10,7 @@
 
 (defn get-property-keys
   [^Element element]
-  (set (.getPropertyKeys element)))
+  (.getPropertyKeys element))
 
 
 (defn set-property!

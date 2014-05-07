@@ -1,6 +1,6 @@
 (ns gizmo.graph
   (:refer-clojure :exclude [keys])
-  (:import (com.tinkerpop.blueprints Graph Vertex Edge)))
+  (:import (com.tinkerpop.blueprints Graph TransactionalGraph ThreadedTransactionalGraph Vertex Edge)))
 
 (defn get-features
   [^Graph graph]
