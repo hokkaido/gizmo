@@ -4,25 +4,16 @@
             [gizmo.vertex :as v]
             [gizmo.edge :as e]
             [gizmo.query :as q])
-  (:import  (com.tinkerpop.blueprints Element TransactionalGraph TransactionalGraph$Conclusion Features)
-            (com.tinkerpop.blueprints.impls.tg TinkerGraphFactory TinkerGraph)))
+  (:import  (com.tinkerpop.blueprints.impls.tg TinkerGraphFactory TinkerGraph)))
   
 (deftest test-query
-  (testing "getFeatures()"
+  (testing "vertex query"
     (let [graph (TinkerGraphFactory/createTinkerGraph)
-          vertexA (.addVertex graph "OMG")]
-    (is (= 7 (count (seq (g/get-vertices graph))))))))
+          bonnie (g/add-vertex! graph nil)
+          clyde (g/add-vertex! graph nil)
+          police (g/add-vertex! graph nil)
+          likes (g/add-edge! graph nil bonnie clyde "likes")
+          query-result (q/labels (v/query bonnie) ["likes"])]
+    (is (= likes (first (q/edges query-result)))))))
 
 
-(deftest test-graph-add-b
-  (testing "getFeatures()"
-    (let [graph (TinkerGraphFactory/createTinkerGraph)
-          vertexA (g/add-vertex! graph "OMG")]
-    (is (= 7 (count (seq (g/get-vertices graph))))))))
-
-(deftest test-add-and-get
-  (testing "add-get-equality"
-    (let [graph (TinkerGraphFactory/createTinkerGraph)
-          a     (g/add-vertex! graph "bz")
-          b     (g/get-vertex graph "bz")]
-    (is (= (v/get-id a) (v/get-id b))))))
